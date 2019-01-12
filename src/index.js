@@ -156,5 +156,5 @@ function _trimTrailingZeroesTo(number, minPostDecimalDigits) {
 
   if (toRemove < 0) return number;
 
-  return pre + '.' + post.replace(new RegExp(`0{${toRemove}}$`), '');
+  return pre + '.' + post.replace(new RegExp(`0{0,${toRemove}}$`), '');
 }
